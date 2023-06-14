@@ -41,7 +41,7 @@ const userState = useSelector(state=>state?.auth?.user)
     const getUser = async()=>{
         try{
     
-        const url = `https://mern-recette-server.vercel.app/api/auth/login/success`;
+        const url = `http://localhost:5000/api/auth/login/success`;
         const response = await axios.get(url,{withCredentials:true})
         console.log(response)
          setUser(response.data.user)
@@ -89,7 +89,7 @@ const[getUserFromGoogle,setGetUserFromGoogle] = useState(false)
       const handleClick = (e)=>{
   e.preventDefault()
   console.log(base_url);
-            window.open(`https://mern-recette-server.vercel.app/api/auth/google/callback`,"_self")
+            window.open(`http://localhost:5000/api/auth/google/callback`,"_self")
             setGetUserFromGoogle(true)
   
        

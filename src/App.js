@@ -31,7 +31,7 @@ if(userstate)
 useEffect(()=>{
   const getUser = async()=>{
     try{
-  const url = `https://mern-recette-server.vercel.app/api/auth/login/success`;
+  const url = `http://localhost:5000/api/auth/login/success`;
   
   const response = await axios.get(url,{withCredentials:true})
   console.log(response)
