@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 import {base_url } from '../../utils/baseUrl'
-const API = axios.create({baseURL:base_url});
+const API = axios.create({baseURL:"https://mern-recette-server.vercel.app"});
 API.interceptors.request.use((req)=>{
    if(localStorage.getItem('customer')){
     req.headers.authorization =`Bearer ${
