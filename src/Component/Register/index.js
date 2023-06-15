@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import CustomerInput from '../CustomerInput'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import './style.css'
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
@@ -9,7 +9,7 @@ import { createUser, resetState } from '../../features/auth/authSlice'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 const Register = () => {
-    const navigate = useNavigate()
+    const history = useHistory()
     const msgState = useSelector(state => state?.auth?.message)
     const isRegistred = useSelector(state => state?.auth?.isSuccess)
     const dispatch = useDispatch()
@@ -43,10 +43,10 @@ const Register = () => {
     useEffect(() => {
         if (isRegistred === true) {
             setTimeout(() => {
-                navigate('https://recette-beta.vercel.app')
+                history.push('/')
             }, 2000)
         }
-    }, [isRegistred, navigate])
+    }, [isRegistred, history])
     useEffect(() => {
         const handleResize = () => {
             const isSmall = window.matchMedia("(max-width: 600px)").matches;
