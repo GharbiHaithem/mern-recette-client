@@ -43,7 +43,7 @@ const Register = () => {
     useEffect(() => {
         if (isRegistred === true) {
             setTimeout(() => {
-                navigate('/')
+                navigate('https://recette-beta.vercel.app')
             }, 2000)
         }
     }, [isRegistred, navigate])
