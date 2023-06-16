@@ -50,7 +50,7 @@ const Register = () => {
                 navigate('/')
             }, 2000)
         }
-    }, [isRegistred, history])
+    }, [isRegistred, navigate])
     useEffect(() => {
         const handleResize = () => {
             const isSmall = window.matchMedia("(max-width: 600px)").matches;
