@@ -81,7 +81,7 @@ console.log(userStates.isLoagin)
 
     const handleLoginFn = ()=>{
     //  
-    window.open('https://recette-crud.onrender.com/api/auth/google','_self')
+    window.open('https://recette-crud.onrender.com/api/auth/google/callback','_self')
      
       }
      
